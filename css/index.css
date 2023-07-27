@@ -1,0 +1,213 @@
+@font-face {
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../font/MiSans-Regular.subset.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Pacifico-Regular";
+    src: url("../font/Pacifico-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "UnidreamLED";
+    src: url("../font/UnidreamLED.ttf") format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 禁止选中 */
+    user-select: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: url(../images/bg_1.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    /* 3D效果 */
+    transform-style: preserve-3d;
+}
+
+
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    /* 设置容器高度为视窗高度 */
+}
+
+.row .left {
+    margin: 0 10%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.row .left .header {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+
+.left .header .header-img img {
+    height: 9.5rem;
+    border-radius: 50%;
+    transition: transform 0.5s;
+}
+
+.left .header-img img:hover {
+    transform: scale(1.01);
+    transform: rotate(360deg);
+}
+
+.left .header .header-title {
+    display: flex;
+    flex-direction: column;
+    font-family: "Pacifico-Regular";
+}
+
+
+.left .header-title .title-big {
+    font-size: 4rem;
+    transition: transform 0.5s;
+}
+
+.left .header-title .title-big:hover {
+    transform: scale(1.01);
+}
+
+.left .header-title .title-small {
+    font-size: 1.5rem;
+    transition: transform 0.5s;
+}
+
+.left .header-title .title-small:hover {
+    transform: scale(1.01);
+}
+
+.left .card {
+    background: rgb(0 0 0 / 25%);
+    backdrop-filter: blur(10px);
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    max-width: 100%;
+    transition: transform 0.5s;
+    /* 鼠标悬停手势 */
+    cursor: pointer;
+}
+
+.left .card:hover {
+    transform: scale(1.01);
+}
+
+.card .card-title {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title .title-header {
+    align-self: flex-start;
+    font-family: "MiSans";
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-title .title-bottom {
+    align-self: flex-end;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "MiSans";
+}
+
+.card-title .cards-title {
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards-title .title-one {
+    font-family: "Pacifico-Regular";
+    font-size: 0.8rem;
+}
+
+.cards-title .title-two {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.social {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.social:hover {
+    transform: scale(1.01);
+    background: rgb(0 0 0 /25%);
+    backdrop-filter: blur(10px);
+}
+
+a,
+p {
+    text-decoration: none;
+}
+
+.social .iconfont {
+    margin-left: 5px;
+    font-size: 25px;
+    font-weight: 200;
+    transition: 0.5s;
+    color: white;
+}
+
+.social .iconfont:hover {
+    transform: scale(1.2);
+    color: navajowhite;
+}
+
+
+.row .right {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    transition: transform 0.5s;
+}
+
+.right .upline {
+    background: rgb(0 0 0 / 25%);
+    backdrop-filter: blur(10px);
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.upline .time {
+    font-family: "UnidreamLED";
+    font-size: 3rem;
+}
+
+.right img {
+    height: 120px;
+}

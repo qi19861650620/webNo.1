@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+  <head>
+    <meta charset="UTF-8" />
+    <!--禁止浏览器自动翻译-->
+    <meta name="google" content="notranslate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 引入样式 -->
+    <!-- 引用框架 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <!-- 鼠标监听事件 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+    <!-- 引入矢量图标 -->
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/c/font_4152775_8u046508lvg.css"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./js/time.js"></script>
+  </head>
+  <script>
+    //屏蔽右键
+    document.oncontextmenu = function () {
+      iziToast.show({
+        timeout: 2000,
+        icon: "fa-solid fa-circle-exclamation",
+        message: "为了浏览体验，本站禁用右键",
+      });
+      return false;
+    };
+  </script>
+  <body>
+    <main class="row">
+      <!--左侧区域-->
+      <div class="left">
+        <!--头部logo-->
+        <header class="header">
+          <div class="header-img">
+            <img src="./images/vlog.jpg" alt="" />
+          </div>
+          <div class="header-title">
+            <span class="title-big">Welcome</span>
+            <span class="title-small">Let's See</span>
+          </div>
+        </header>
+        <!--卡片-->
+        <div class="card">
+          <div class="card-title">
+            <i class="title-header">‘‘</i>
+            <div class="cards-title">
+              <span class="title-one">Hello World</span>
+              <span class="title-two">我们每个人都是自己人生的主角</span>
+            </div>
+            <i class="title-bottom">’’</i>
+          </div>
+        </div>
+        <!--社交链接-->
+        <div class="social" id="social">
+          <a href="" class="link" id="qq" target="_blank">
+            <i class="iconfont icon-qq"></i>
+          </a>
+          <a href="" class="" id="douyin" target="_blank">
+            <i class="iconfont icon-douyin"></i>
+          </a>
+          <a href="mailto:qi19861650620@qq.com" class="link" id="email">
+            <i class="iconfont icon-youxiang"></i>
+          </a>
+          <a
+            href="https://github.com/dashboard"
+            class="link"
+            id="github"
+            target="_blank"
+          >
+            <i class="iconfont icon-github"></i>
+          </a>
+          <a href="" class="link" id="telegram" target="_blank">
+            <i class="iconfont icon-tuite"></i>
+          </a>
+        </div>
+      </div>
+      <!--右侧区域-->
+      <div class="right">
+        <!-- 头部区域 -->
+        <div class="header">
+          <!-- 音乐播放器 -->
+          <div></div>
+          <!-- 今日状况 -->
+          <div class="upline" id="upline">
+            <!--日期-->
+            <div class="data" id="data"></div>
+            <!--时间-->
+            <div class="time" id="time"></div>
+          </div>
+        </div>
+        <img src="./images/vlog.jpg" alt="" />
+      </div>
+    </main>
+  </body>
+</html>
